@@ -1,0 +1,27 @@
+1. Extract ZIP
+
+Canopy.exe:
+1. Buka folder dist
+2. Run Canopy.exe
+
+
+Source Code:
+1. Buka folder di vscode
+2. Install library library yang diperlukan, terutama gymnasium API dan python
+3. Terdapat 3 file; Carbon_env.py, train.py, watch.py
+4. Carbon_env adalah file untuk penentuan environment serta, training method agent.
+4.1. grid size: ukuran grid (untuk setiap perubahan agent harus dilatih ulang)
+4.2. k_plants: jumlah plant yang tersedia (default value)
+4.3. reduction_m: jumlah reduction intensity yang dipunyai plant
+4.4. emission_radius : radius polusi emission (default value)
+4.5. func reset(), intensity: intensitas emission carbon
+5. train_env adalah file untuk training agent.
+5.1. Model_Name: Nama untuk model yang akan dilatih
+5.2. Total timesteps:  penentuan untuk seberapa banyak agent menyimpan plant
+5.3. Save_interval: Interval penyimpanan otak agent yang sudah dilatih (untuk safety, dan error checking)
+5.4. env: untuk instansiasi environment, k_plants untuk jumlah tanaman yang akan dipakai setiap iterasi
+5.5. Model: penentuan model training, learning_rate (koefisien alpha dalam neural network), ent_coef (entropy untuk tingkat penasaran agent)
+6. watch adalah file untuk melihat hasil dari training agent
+6.1. Model_Name: Nama untuk model yang di load
+6.2. Num_instances: Jumlah simulasi yang ditunjukan sekali load
+6.3. K_plants_per_env: Jumlah tanaman yang diberikan untuk agent pakai per environment yang di load (dalam default 9 environment dan 5 plant	
